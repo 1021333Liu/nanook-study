@@ -261,6 +261,38 @@
     .today-list { max-width: 720px; margin: 34px 0 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.22); }
     .today-list li { padding: 17px 0; border-bottom: 1px solid rgba(255,255,255,.16); color: rgba(245,245,247,.82); font-size: 17px; }
     .today-list li::before { content: "↳"; color: #8cc7ff; margin-right: 14px; }
+    .today {
+      background: transparent;
+      color: var(--ink);
+      margin: 0;
+      padding: 112px 0 30px;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .today .section-head { border-bottom: 0; }
+    .today .section-label { color: var(--blue); }
+    .today .section-num { color: var(--muted); }
+    .today .reading-copy p { color: #3b3b3e; }
+    .today-list {
+      max-width: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 32px 0 0;
+      padding: 0;
+      border-top: 0;
+    }
+    .today-list li {
+      padding: 25px 28px;
+      border: 0;
+      border-radius: 22px;
+      background: #fff;
+      color: #3b3b3e;
+      font-size: 17px;
+      box-shadow: 0 10px 35px rgba(0,0,0,.045);
+    }
+    .today-list li::before { color: var(--blue); }
+    .today .pullquote { color: var(--ink); }
     .evidence { gap: 14px; }
     .evidence-card { border: 0; border-radius: 22px; padding: 28px; background: #fff; box-shadow: 0 10px 35px rgba(0,0,0,.045); }
     .evidence-card.solid { border-top: 0; box-shadow: inset 0 3px 0 var(--blue), 0 10px 35px rgba(0,0,0,.045); }
@@ -278,6 +310,8 @@
       .timeline { gap: 12px; }
       .time-card { border-radius: 18px; }
       .today { border-radius: 26px; padding: 58px 28px 64px; }
+      .today { padding: 70px 0 30px; }
+      .today-list { grid-template-columns: 1fr; }
     }
     @media (max-width: 1000px) {
       .section-head { display: block; }
